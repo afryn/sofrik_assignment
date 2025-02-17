@@ -5,7 +5,8 @@
 3. create database named 'sofrik_assignment' using phpmyadmin 
 4. in project directory, run command :  php aritsan migrate
 5. in project directory, run command :  php aritsan db:seed
-6. in project directory, run command :  php artisan serve, visit the mentioned url
+6. in project directory, run command :  php artisan serve
+7. visit the mentioned url
 
 Happy Browsing !
 
