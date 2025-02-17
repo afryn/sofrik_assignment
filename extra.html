@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <input type="text" name="" id="" class="form-control">
+    </form>
+    <script>
+    $('.ajaxFormSubmit').on('submit', function(){
+        e.preventDefault()
+       
+        var formdata = new FormData($(this)[0])
+        $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.post({
+                url: $(this).attr('action'),
+                data: {
+                    statistics_type: type
+                },
+                contentType
+                beforeSend: function () {
+                    $('#loading').show()
+                },
+                success: function (data) {
+                },
+                complete: function () {
+                    $('#loading').hide()
+                }
+            });
+    })
+    </script>
+    
+</body>
+</html>
